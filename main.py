@@ -31,7 +31,7 @@ parser.add_argument('--content', type=str, default=None)
 
 # Output
 parser.add_argument('--out-dir', type=str, default='out/')
-parser.add_argument('--name-img', type=str,default='gen.png')
+parser.add_argument('--name_img', type=str,default='gen.png')
 
 import os
 import utils
@@ -57,7 +57,7 @@ def run(args):
     #loss_fig = utils.plot_losses(losses_dict)
 
     # Save generated image
-    utils.save_tensor_img(gen_img, os.path.join(args.out_dir, args.name-img))
+    utils.save_tensor_img(gen_img, os.path.join(args.out_dir, args.name_img))
 
     # Save losses
     #loss_fig.savefig(os.path.join(args.out_dir, 'losses.pdf'))
